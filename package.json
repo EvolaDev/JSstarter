@@ -1,0 +1,25 @@
+{
+  "name": "jsstarter",
+  "version": "1.0.0",
+  "description": "Base algoritms and design patterns on pure js for begginers or  people who want to quickly remember or understand these things",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EvolaDev/JSstarter.git"
+  },
+  "author": "EvolaDev",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/EvolaDev/JSstarter/issues"
+  },
+  "homepage": "https://github.com/EvolaDev/JSstarter#readme",
+  "devDependencies": {
+    "jest": "^25.1.0"
+  },
+  "dependencies": {
+    "source-map-support": "^0.5.16"
+  }
+}
