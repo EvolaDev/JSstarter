@@ -4,7 +4,13 @@
   "description": "Base algoritms and design patterns on pure js for begginers or  people who want to quickly remember or understand these things",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest --watchAll"
+  },
+  "jest": {
+    "verbose": true,
+    "extraGlobals": [
+      "Math"
+    ]
   },
   "repository": {
     "type": "git",
