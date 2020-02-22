@@ -1,7 +1,7 @@
 //O(n^2)
-export const unsortedArray = [2, 3, 1, 4, 6, 5, 9, 7, 8];
+const unsortedArray = [2, 3, 1, 4, 6, 5, 9, 7, 8];
 
-export const selectionSort = unsortedArray => {
+const selectionSort = unsortedArray => {
     const array = unsortedArray.slice();
     for (let i = 0; i < array.length - 1; i++) {
         let min = i;
@@ -17,3 +17,5 @@ export const selectionSort = unsortedArray => {
     }
     return array;
 };
+
+module.exports = { unsortedArray, selectionSort };
