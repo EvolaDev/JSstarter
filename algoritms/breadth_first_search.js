@@ -2,7 +2,7 @@ const Queue = require('../data_structures/Queue');
 
 const graph = new (function Graph() {
     this.you = ['alice', 'bob', 'claire'];
-    this.bob = ['ann', 'peggy'];
+    this.bob = ['ann', 'peggy', 'you'];
     this.alice = ['peggy'];
     this.claire = ['thom', 'jonny'];
     this.ann = [];
@@ -13,14 +13,18 @@ const graph = new (function Graph() {
 
 const breadthFirstSearch = graph => {
     const queue = new Queue(graph['you']);
+    const alreadyChecked = [];
     while (!queue.isEmpty()) {
         const person = queue.peek();
         queue.dequeue();
+        // if person is already checked then next iteration
+        if (alreadyChecked.includes(person)) continue;
         if (isSeller(person)) {
             console.log(person + ' is seller');
             return true;
         }
         queue.enqueue(graph[person]);
+        alreadyChecked.push(person);
     }
     return false;
 };
